@@ -3,36 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Twisted Transistor - Automatización y Electrónica Personalizada</title>
+  <title>SAO - TECH</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Cabecera y navegación -->
+  <!-- Cabecera con información de contacto -->
   <header>
     <div class="container header-container">
-      <nav>
-        <ul>
-          <li><a href="#home">Inicio</a></li>
-          <li><a href="#services">Servicios</a></li>
-          <li><a href="#portfolio">Portafolio</a></li>
-          <li><a href="#contact">Contacto</a></li>
-        </ul>
-      </nav>
-      <!-- Botón de modo oscuro/claro -->
-      <button id="theme-toggle" aria-label="Cambiar modo oscuro/claro">🌙</button>
+      <div class="branding">
+        <h1>SAO - TECH</h1>
+      </div>
+      <div class="contact-info">
+        <p>Contacto: <a href="tel:2920591019">2920-591019</a></p>
+      </div>
     </div>
   </header>
 
   <!-- Contenido principal -->
   <main>
     <div class="container">
-      <!-- Sección de inicio -->
-      <section id="home" class="reveal">
-        <h1>Bienvenido a Twisted Transistor</h1>
-        <p>Soluciones de automatización y electrónica personalizada en San Antonio Oeste.</p>
+      <!-- Sección de Portafolio (primero) -->
+      <section id="portfolio" class="reveal">
+        <h2>Portafolio</h2>
+        <p>Proyectos realizados y soluciones implementadas en automatización y electrónica.</p>
+        <div class="portfolio-container">
+          <div class="portfolio-item reveal">
+            <img src="images/proyecto-riego.jpg" alt="Proyecto de Riego Automatizado">
+            <h3>Automatización de Riego</h3>
+            <p>Instalación de sensores y control remoto para invernaderos y áreas verdes.</p>
+          </div>
+          <div class="portfolio-item reveal">
+            <img src="images/monitoreo-ambiental.png" alt="Sistema IoT de Monitoreo Ambiental">
+            <h3>Monitoreo Ambiental IoT</h3>
+            <p>Medición de temperatura, humedad y calidad del aire con ESP32.</p>
+          </div>
+          <div class="portfolio-item reveal">
+            <img src="images/control-iluminacion.webp" alt="Control de Iluminación y Seguridad">
+            <h3>Control de Iluminación y Seguridad</h3>
+            <p>Sistema integrado para control de luces y alarmas en tiempo real.</p>
+          </div>
+        </div>
       </section>
 
-      <!-- Sección de servicios -->
+      <!-- Sección de Servicios -->
       <section id="services" class="reveal">
         <h2>Servicios y Productos</h2>
         <div class="service-container">
@@ -71,33 +84,10 @@
         </div>
       </section>
 
-      <!-- Sección de portafolio -->
-      <section id="portfolio" class="reveal">
-        <h2>Portafolio</h2>
-        <p>Proyectos realizados y soluciones implementadas en el campo de la automatización y electrónica.</p>
-        <div class="portfolio-container">
-          <div class="portfolio-item reveal">
-            <img src="images/proyecto-riego.jpg" alt="Proyecto de Riego Automatizado">
-            <h3>Automatización de Riego</h3>
-            <p>Instalación de sensores y control remoto de riego para invernaderos.</p>
-          </div>
-          <div class="portfolio-item reveal">
-            <img src="images/monitoreo-ambiental.png" alt="Sistema IoT de Monitoreo Ambiental">
-            <h3>Monitoreo Ambiental IoT</h3>
-            <p>Medición de temperatura, humedad y calidad del aire con ESP32.</p>
-          </div>
-          <div class="portfolio-item reveal">
-            <img src="images/control-iluminacion.webp" alt="Control de Iluminación y Seguridad">
-            <h3>Control de Iluminación y Seguridad</h3>
-            <p>Sistema integrado para control de luces y alarmas en tiempo real.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Sección de contacto -->
+      <!-- Sección de Contacto -->
       <section id="contact" class="reveal">
         <h2>Contacto</h2>
-        <p>¿Interesado en nuestras soluciones? Contáctanos para una consulta gratuita.</p>
+        <p>¿Interesado en nuestras soluciones? Comunícate para una consulta gratuita.</p>
         <form id="contact-form">
           <label for="name">Nombre:</label>
           <input type="text" id="name" name="name" required>
@@ -117,7 +107,7 @@
   <!-- Pie de página -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Twisted Transistor. Todos los derechos reservados.</p>
+      <p>&copy; 2025 SAO - TECH. Todos los derechos reservados.</p>
     </div>
   </footer>
 
