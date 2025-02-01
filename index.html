@@ -9,7 +9,7 @@
 <body>
   <!-- Cabecera y navegación -->
   <header>
-    <div class="container">
+    <div class="container header-container">
       <nav>
         <ul>
           <li><a href="#home">Inicio</a></li>
@@ -18,6 +18,8 @@
           <li><a href="#contact">Contacto</a></li>
         </ul>
       </nav>
+      <!-- Botón de modo oscuro/claro -->
+      <button id="theme-toggle" aria-label="Cambiar modo oscuro/claro">🌙</button>
     </div>
   </header>
 
@@ -25,17 +27,17 @@
   <main>
     <div class="container">
       <!-- Sección de inicio -->
-      <section id="home">
+      <section id="home" class="reveal">
         <h1>Bienvenido a Twisted Transistor</h1>
         <p>Soluciones de automatización y electrónica personalizada en San Antonio Oeste.</p>
       </section>
 
       <!-- Sección de servicios -->
-      <section id="services">
+      <section id="services" class="reveal">
         <h2>Servicios y Productos</h2>
         <div class="service-container">
-          <!-- Tarjeta de Automatización y Electrónica Personalizada -->
-          <div class="service-card" data-category="automatizacion">
+          <!-- Tarjeta: Automatización y Electrónica Personalizada -->
+          <div class="service-card reveal" data-category="automatizacion">
             <h3>Automatización y Electrónica Personalizada</h3>
             <ul>
               <li>Automatización de riego (ALTO RIEGO)</li>
@@ -45,8 +47,8 @@
               <li>Notificaciones y alertas en tiempo real</li>
             </ul>
           </div>
-          <!-- Tarjeta de Desarrollo y Venta de Productos Tecnológicos -->
-          <div class="service-card" data-category="desarrollo">
+          <!-- Tarjeta: Desarrollo y Venta de Productos Tecnológicos -->
+          <div class="service-card reveal" data-category="desarrollo">
             <h3>Desarrollo y Venta de Productos Tecnológicos</h3>
             <ul>
               <li>Sistema de riego automatizado ALTO RIEGO</li>
@@ -56,8 +58,8 @@
               <li>Alarmas de seguridad personalizadas</li>
             </ul>
           </div>
-          <!-- Tarjeta de Reparación y Soporte Técnico -->
-          <div class="service-card" data-category="soporte">
+          <!-- Tarjeta: Servicios de Reparación y Soporte Técnico -->
+          <div class="service-card reveal" data-category="soporte">
             <h3>Servicios de Reparación y Soporte Técnico</h3>
             <ul>
               <li>Reparación y mantenimiento de dispositivos electrónicos</li>
@@ -70,22 +72,22 @@
       </section>
 
       <!-- Sección de portafolio -->
-      <section id="portfolio">
+      <section id="portfolio" class="reveal">
         <h2>Portafolio</h2>
         <p>Proyectos realizados y soluciones implementadas en el campo de la automatización y electrónica.</p>
         <div class="portfolio-container">
-          <div class="portfolio-item">
-            <img src="https://via.placeholder.com/300x200" alt="Proyecto de Riego Automatizado">
+          <div class="portfolio-item reveal">
+            <img src="images/proyecto-riego.jpg" alt="Proyecto de Riego Automatizado">
             <h3>Automatización de Riego</h3>
             <p>Instalación de sensores y control remoto de riego para invernaderos.</p>
           </div>
-          <div class="portfolio-item">
-            <img src="https://via.placeholder.com/300x200" alt="Sistema IoT de Monitoreo Ambiental">
+          <div class="portfolio-item reveal">
+            <img src="images/monitoreo-ambiental.png" alt="Sistema IoT de Monitoreo Ambiental">
             <h3>Monitoreo Ambiental IoT</h3>
             <p>Medición de temperatura, humedad y calidad del aire con ESP32.</p>
           </div>
-          <div class="portfolio-item">
-            <img src="https://via.placeholder.com/300x200" alt="Control de Iluminación y Seguridad">
+          <div class="portfolio-item reveal">
+            <img src="images/control-iluminacion.webp" alt="Control de Iluminación y Seguridad">
             <h3>Control de Iluminación y Seguridad</h3>
             <p>Sistema integrado para control de luces y alarmas en tiempo real.</p>
           </div>
@@ -93,7 +95,7 @@
       </section>
 
       <!-- Sección de contacto -->
-      <section id="contact">
+      <section id="contact" class="reveal">
         <h2>Contacto</h2>
         <p>¿Interesado en nuestras soluciones? Contáctanos para una consulta gratuita.</p>
         <form id="contact-form">
