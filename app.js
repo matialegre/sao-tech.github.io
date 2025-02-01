@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* --------------------------------------
      2. Smooth Scrolling para navegación interna
   ----------------------------------------- */
-  const navLinks = document.querySelectorAll('nav ul li a');
+  const navLinks = document.querySelectorAll('header a');
   navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
       e.preventDefault();
@@ -33,26 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* --------------------------------------
-     3. Modo Oscuro / Claro
-  ----------------------------------------- */
-  const themeToggle = document.getElementById('theme-toggle');
-  const currentTheme = localStorage.getItem('theme');
-
-  // Aplica la preferencia guardada
-  if (currentTheme === 'dark') {
-    document.body.classList.add('dark-mode');
-    themeToggle.textContent = '☀️';
-  }
-
-  themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    const isDarkMode = document.body.classList.contains('dark-mode');
-    themeToggle.textContent = isDarkMode ? '☀️' : '🌙';
-    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-  });
-
-  /* --------------------------------------
-     4. Animación de Aparición (Scroll Reveal)
+     3. Animación de Aparición (Scroll Reveal)
   ----------------------------------------- */
   const revealElements = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
