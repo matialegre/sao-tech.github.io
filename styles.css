@@ -1,27 +1,41 @@
-/* Reset básico y configuración global */
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Fuente y transición general */
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  background: #f4f4f4;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
   color: #333;
+  transition: background 0.3s, color 0.3s;
 }
 
-/* Estilos para la cabecera y navegación */
+/* Contenedor central */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cabecera y navegación */
 header {
-  background: #333;
+  background: #2c3e50;
   color: #fff;
   padding: 1rem 0;
 }
 
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 nav ul {
   display: flex;
-  justify-content: center;
   list-style: none;
 }
 
@@ -33,32 +47,51 @@ nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
+  color: #1abc9c;
 }
 
-/* Estilos para las secciones */
+/* Botón de modo oscuro/claro */
+#theme-toggle {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Secciones principales */
 main {
-  padding: 2rem;
-}
-
-section {
-  margin-bottom: 2rem;
+  padding: 2rem 0;
 }
 
 /* Sección de inicio */
 #home {
   text-align: center;
-  padding: 2rem 0;
-  background: #e2e2e2;
-  border-radius: 8px;
+  padding: 4rem 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  margin-bottom: 2rem;
 }
 
-/* Títulos */
-h1, h2, h3 {
+#home h1 {
+  font-size: 2.5rem;
   margin-bottom: 1rem;
+}
+
+/* Sección de servicios y portafolio */
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #2c3e50;
 }
 
 /* Tarjetas de servicios y portafolio */
@@ -66,27 +99,35 @@ h1, h2, h3 {
 .portfolio-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
 }
 
 .service-card,
 .portfolio-item {
   background: #fff;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   width: 300px;
+  transition: transform 0.3s;
+}
+
+.service-card:hover,
+.portfolio-item:hover {
+  transform: translateY(-5px);
 }
 
 .service-card ul {
   list-style: disc;
   padding-left: 20px;
+  margin-top: 0.5rem;
 }
 
 .portfolio-item img {
   max-width: 100%;
   border-radius: 4px;
+  margin-bottom: 1rem;
 }
 
 /* Formulario de contacto */
@@ -96,6 +137,10 @@ form {
   gap: 1rem;
   max-width: 500px;
   margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 form label {
@@ -104,7 +149,7 @@ form label {
 
 form input,
 form textarea {
-  padding: 0.5rem;
+  padding: 0.75rem;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
@@ -112,23 +157,58 @@ form textarea {
 form button {
   padding: 0.75rem;
   border: none;
-  background: #333;
+  background: #2c3e50;
   color: #fff;
   border-radius: 4px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s;
 }
 
 form button:hover {
-  background: #555;
+  background: #1abc9c;
 }
 
 /* Pie de página */
 footer {
-  background: #333;
+  background: #2c3e50;
   color: #fff;
   text-align: center;
   padding: 1rem 0;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background: #1c1c1c;
+}
+
+body.dark-mode nav ul li a {
+  color: #e0e0e0;
+}
+
+body.dark-mode nav ul li a:hover {
+  color: #1abc9c;
+}
+
+body.dark-mode form {
+  background: rgba(40, 40, 40, 0.9);
+}
+
+/* Animaciones de aparición (Scroll Reveal) */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Responsividad */
@@ -137,5 +217,9 @@ footer {
   .portfolio-container {
     flex-direction: column;
     align-items: center;
+  }
+  
+  #home h1 {
+    font-size: 2rem;
   }
 }
