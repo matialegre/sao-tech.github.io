@@ -22,64 +22,61 @@
   <!-- Contenido principal -->
   <main>
     <div class="container">
-      <!-- Sección de Portafolio (primero) -->
-      <section id="portfolio" class="reveal">
-        <h2>Portafolio</h2>
-        <p>Proyectos realizados y soluciones implementadas en automatización y electrónica.</p>
-        <div class="portfolio-container">
-          <div class="portfolio-item reveal">
-            <img src="images/proyecto-riego.jpg" alt="Proyecto de Riego Automatizado">
-            <h3>Automatización de Riego</h3>
-            <p>Instalación de sensores y control remoto para invernaderos y áreas verdes.</p>
+      <!-- Sección de Servicios y Productos (más amigable y simplificada) -->
+      <section id="services" class="reveal">
+        <h2>Servicios y Productos</h2>
+        <p>Ofrecemos soluciones para automatizar tu hogar, negocio y espacios productivos.</p>
+        <div class="service-container">
+          <!-- Categoría 1: Automatización -->
+          <div class="service-card reveal">
+            <h3>Automatización para Hogares y Negocios</h3>
+            <ul>
+              <li>Riego Automatizado</li>
+              <li>Iluminación Inteligente</li>
+              <li>Seguridad y Control de Acceso</li>
+            </ul>
           </div>
-          <div class="portfolio-item reveal">
-            <img src="images/monitoreo-ambiental.png" alt="Sistema IoT de Monitoreo Ambiental">
-            <h3>Monitoreo Ambiental IoT</h3>
-            <p>Medición de temperatura, humedad y calidad del aire con ESP32.</p>
+          <!-- Categoría 2: Productos a Medida -->
+          <div class="service-card reveal">
+            <h3>Productos Tecnológicos a Medida</h3>
+            <ul>
+              <li>Sensores y Controladores IoT</li>
+              <li>Soluciones de Conectividad</li>
+            </ul>
           </div>
-          <div class="portfolio-item reveal">
-            <img src="images/control-iluminacion.webp" alt="Control de Iluminación y Seguridad">
-            <h3>Control de Iluminación y Seguridad</h3>
-            <p>Sistema integrado para control de luces y alarmas en tiempo real.</p>
+          <!-- Categoría 3: Servicio Técnico -->
+          <div class="service-card reveal">
+            <h3>Servicio Técnico Especializado</h3>
+            <ul>
+              <li>Mantenimiento y Reparación</li>
+              <li>Asesoría Personalizada</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <!-- Sección de Servicios -->
-      <section id="services" class="reveal">
-        <h2>Servicios y Productos</h2>
-        <div class="service-container">
-          <!-- Tarjeta: Automatización y Electrónica Personalizada -->
-          <div class="service-card reveal" data-category="automatizacion">
-            <h3>Automatización y Electrónica Personalizada</h3>
-            <ul>
-              <li>Automatización de riego (ALTO RIEGO)</li>
-              <li>Control de iluminación y energía</li>
-              <li>Sistemas IoT y monitoreo ambiental</li>
-              <li>Portones y cerraduras electrónicas</li>
-              <li>Notificaciones y alertas en tiempo real</li>
-            </ul>
+      <!-- Sección de Portafolio -->
+      <section id="portfolio" class="reveal">
+        <h2>Portafolio</h2>
+        <p>Nuestros proyectos y soluciones en automatización y electrónica.</p>
+        <div class="portfolio-container">
+          <!-- Proyecto 1 -->
+          <div class="portfolio-item reveal">
+            <img src="images/proyecto-riego.jpg" alt="Proyecto de Riego Automatizado">
+            <h3>Riego Automatizado</h3>
+            <p>Instalación de sensores y control remoto para invernaderos y jardines.</p>
           </div>
-          <!-- Tarjeta: Desarrollo y Venta de Productos Tecnológicos -->
-          <div class="service-card reveal" data-category="desarrollo">
-            <h3>Desarrollo y Venta de Productos Tecnológicos</h3>
-            <ul>
-              <li>Sistema de riego automatizado ALTO RIEGO</li>
-              <li>Sensores ambientales con ESP8266/ESP32</li>
-              <li>Controladores WiFi de luces y relés</li>
-              <li>Cerraduras electrónicas inteligentes</li>
-              <li>Alarmas de seguridad personalizadas</li>
-            </ul>
+          <!-- Proyecto 2 -->
+          <div class="portfolio-item reveal">
+            <img src="images/monitoreo-ambiental.png" alt="Sistema IoT de Monitoreo Ambiental">
+            <h3>Monitoreo Ambiental</h3>
+            <p>Medición de temperatura, humedad y calidad del aire con ESP32.</p>
           </div>
-          <!-- Tarjeta: Servicios de Reparación y Soporte Técnico -->
-          <div class="service-card reveal" data-category="soporte">
-            <h3>Servicios de Reparación y Soporte Técnico</h3>
-            <ul>
-              <li>Reparación y mantenimiento de dispositivos electrónicos</li>
-              <li>Soporte en redes WiFi y sistemas de comunicación</li>
-              <li>Integración de sistemas con software (MQTT, dashboards)</li>
-              <li>Asesoramiento en proyectos y automatización</li>
-            </ul>
+          <!-- Proyecto 3 -->
+          <div class="portfolio-item reveal">
+            <img src="images/control-iluminacion.webp" alt="Control de Iluminación y Seguridad">
+            <h3>Iluminación y Seguridad</h3>
+            <p>Control integrado de luces y alarmas para mayor seguridad.</p>
           </div>
         </div>
       </section>
@@ -87,7 +84,7 @@
       <!-- Sección de Contacto -->
       <section id="contact" class="reveal">
         <h2>Contacto</h2>
-        <p>¿Interesado en nuestras soluciones? Comunícate para una consulta gratuita.</p>
+        <p>¿Te interesa alguna solución? Escríbenos para una consulta gratuita.</p>
         <form id="contact-form">
           <label for="name">Nombre:</label>
           <input type="text" id="name" name="name" required>
