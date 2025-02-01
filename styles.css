@@ -5,13 +5,13 @@
   box-sizing: border-box;
 }
 
-/* Fuente y transición general */
+/* Estilos base para tipografía y transición */
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
-  color: #333;
-  transition: background 0.3s, color 0.3s;
+  background: #121212;
+  color: #e0e0e0;
+  overflow-x: hidden;
 }
 
 /* Contenedor central */
@@ -21,11 +21,19 @@ body {
   margin: 0 auto;
 }
 
-/* Cabecera y navegación */
+/* Cabecera con fondo animado */
 header {
-  background: #2c3e50;
-  color: #fff;
+  background: linear-gradient(270deg, #1c1c1c, #333, #1c1c1c);
+  background-size: 600% 600%;
+  animation: GradientAnimation 10s ease infinite;
   padding: 1rem 0;
+  border-bottom: 2px solid #1abc9c;
+}
+
+@keyframes GradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .header-container {
@@ -34,33 +42,18 @@ header {
   align-items: center;
 }
 
-nav ul {
-  display: flex;
-  list-style: none;
-}
-
-nav ul li {
-  margin: 0 1rem;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
+.branding h1 {
+  font-size: 2rem;
   color: #1abc9c;
 }
 
-/* Botón de modo oscuro/claro */
-#theme-toggle {
-  background: transparent;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #fff;
+.contact-info p {
+  font-size: 1rem;
+}
+
+.contact-info a {
+  color: #1abc9c;
+  text-decoration: none;
 }
 
 /* Secciones principales */
@@ -68,34 +61,24 @@ main {
   padding: 2rem 0;
 }
 
-/* Sección de inicio */
-#home {
-  text-align: center;
-  padding: 4rem 1rem;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
-  margin-bottom: 2rem;
-}
-
-#home h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-/* Sección de servicios y portafolio */
-section {
+/* Sección de Portafolio */
+#portfolio {
   margin-bottom: 3rem;
 }
 
-section h2 {
+#portfolio h2 {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   font-size: 2rem;
-  color: #2c3e50;
+  color: #1abc9c;
 }
 
-/* Tarjetas de servicios y portafolio */
-.service-container,
+#portfolio p {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #bbb;
+}
+
 .portfolio-container {
   display: flex;
   flex-wrap: wrap;
@@ -103,25 +86,17 @@ section h2 {
   justify-content: center;
 }
 
-.service-card,
 .portfolio-item {
-  background: #fff;
+  background: #1c1c1c;
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   width: 300px;
   transition: transform 0.3s;
 }
 
-.service-card:hover,
 .portfolio-item:hover {
   transform: translateY(-5px);
-}
-
-.service-card ul {
-  list-style: disc;
-  padding-left: 20px;
-  margin-top: 0.5rem;
 }
 
 .portfolio-item img {
@@ -130,73 +105,120 @@ section h2 {
   margin-bottom: 1rem;
 }
 
-/* Formulario de contacto */
+.portfolio-item h3 {
+  color: #1abc9c;
+  margin-bottom: 0.5rem;
+}
+
+/* Sección de Servicios */
+#services {
+  margin-bottom: 3rem;
+}
+
+#services h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #1abc9c;
+}
+
+.service-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.service-card {
+  background: #1c1c1c;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  width: 300px;
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h3 {
+  color: #1abc9c;
+  margin-bottom: 0.5rem;
+}
+
+.service-card ul {
+  list-style: disc;
+  padding-left: 20px;
+  color: #ccc;
+}
+
+/* Sección de Contacto */
+#contact {
+  margin-bottom: 3rem;
+}
+
+#contact h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #1abc9c;
+}
+
+#contact p {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #bbb;
+}
+
 form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   max-width: 500px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.9);
+  background: #1c1c1c;
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
 form label {
   font-weight: bold;
+  color: #ccc;
 }
 
 form input,
 form textarea {
   padding: 0.75rem;
-  border: 1px solid #ccc;
+  border: 1px solid #333;
   border-radius: 4px;
+  background: #2c2c2c;
+  color: #e0e0e0;
 }
 
 form button {
   padding: 0.75rem;
   border: none;
-  background: #2c3e50;
-  color: #fff;
+  background: #1abc9c;
+  color: #121212;
   border-radius: 4px;
   cursor: pointer;
   transition: background 0.3s;
+  font-weight: bold;
 }
 
 form button:hover {
-  background: #1abc9c;
+  background: #17a089;
 }
 
 /* Pie de página */
 footer {
-  background: #2c3e50;
-  color: #fff;
+  background: #1c1c1c;
+  color: #bbb;
   text-align: center;
   padding: 1rem 0;
-}
-
-/* Modo oscuro */
-body.dark-mode {
-  background: #121212;
-  color: #e0e0e0;
-}
-
-body.dark-mode header,
-body.dark-mode footer {
-  background: #1c1c1c;
-}
-
-body.dark-mode nav ul li a {
-  color: #e0e0e0;
-}
-
-body.dark-mode nav ul li a:hover {
-  color: #1abc9c;
-}
-
-body.dark-mode form {
-  background: rgba(40, 40, 40, 0.9);
+  border-top: 2px solid #1abc9c;
 }
 
 /* Animaciones de aparición (Scroll Reveal) */
@@ -219,7 +241,7 @@ body.dark-mode form {
     align-items: center;
   }
   
-  #home h1 {
-    font-size: 2rem;
+  .branding h1 {
+    font-size: 1.8rem;
   }
 }
