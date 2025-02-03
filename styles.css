@@ -5,13 +5,14 @@
   box-sizing: border-box;
 }
 
-/* Estilos base */
+/* Estilos globales */
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   background: #121212;
   color: #e0e0e0;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /* Contenedor central */
@@ -19,16 +20,19 @@ body {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 20px;
 }
 
-/* Cabecera con fondo animado */
+/* Cabecera */
 header {
   background: linear-gradient(270deg, #1c1c1c, #333, #1c1c1c);
   background-size: 600% 600%;
   animation: GradientAnimation 10s ease infinite;
   padding: 1rem 0;
   border-bottom: 2px solid #1abc9c;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 @keyframes GradientAnimation {
@@ -45,13 +49,19 @@ header {
 }
 
 .branding h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #1abc9c;
-  margin-bottom: 0.5rem;
+}
+
+.branding p {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: #bbb;
 }
 
 .contact-info p {
   font-size: 1rem;
+  margin-top: 0.5rem;
 }
 
 .contact-info a {
@@ -59,29 +69,32 @@ header {
   text-decoration: none;
 }
 
-/* Secciones principales */
-main {
+/* Contenedor con scroll snap */
+.scroll-container {
+  scroll-snap-type: y mandatory;
+}
+
+/* Secciones */
+.section {
+  scroll-snap-align: start;
   padding: 2rem 0;
+  min-height: 100vh;
 }
 
-/* Sección de Servicios y Productos */
-#services {
-  margin-bottom: 3rem;
-}
-
-#services h2 {
+.section h2 {
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   font-size: 2rem;
   color: #1abc9c;
 }
 
-#services p {
+.section p {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   color: #bbb;
 }
 
+/* Tarjetas de Servicios */
 .service-container {
   display: flex;
   flex-wrap: wrap;
@@ -95,11 +108,12 @@ main {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   width: 300px;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .service-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.7);
 }
 
 .service-card h3 {
@@ -113,24 +127,7 @@ main {
   color: #ccc;
 }
 
-/* Sección de Portafolio */
-#portfolio {
-  margin-bottom: 3rem;
-}
-
-#portfolio h2 {
-  text-align: center;
-  margin-bottom: 0.5rem;
-  font-size: 2rem;
-  color: #1abc9c;
-}
-
-#portfolio p {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: #bbb;
-}
-
+/* Tarjetas de Portafolio */
 .portfolio-container {
   display: flex;
   flex-wrap: wrap;
@@ -144,11 +141,13 @@ main {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   width: 300px;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
 }
 
 .portfolio-item:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.7);
 }
 
 .portfolio-item img {
@@ -162,24 +161,7 @@ main {
   margin-bottom: 0.5rem;
 }
 
-/* Sección de Contacto */
-#contact {
-  margin-bottom: 3rem;
-}
-
-#contact h2 {
-  text-align: center;
-  margin-bottom: 0.5rem;
-  font-size: 2rem;
-  color: #1abc9c;
-}
-
-#contact p {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: #bbb;
-}
-
+/* Formulario de Contacto */
 form {
   display: flex;
   flex-direction: column;
@@ -221,7 +203,7 @@ form button:hover {
   background: #17a089;
 }
 
-/* Pie de página */
+/* Pie de Página */
 footer {
   background: #1c1c1c;
   color: #bbb;
@@ -230,7 +212,7 @@ footer {
   border-top: 2px solid #1abc9c;
 }
 
-/* Animaciones de aparición (Scroll Reveal) */
+/* Animación de aparición (Scroll Reveal) */
 .reveal {
   opacity: 0;
   transform: translateY(20px);
@@ -242,7 +224,7 @@ footer {
   transform: translateY(0);
 }
 
-/* Responsividad mejorada para dispositivos móviles */
+/* Responsive: Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
@@ -256,5 +238,9 @@ footer {
   
   .branding h1 {
     font-size: 1.8rem;
+  }
+  
+  .section {
+    padding: 1.5rem 0;
   }
 }
