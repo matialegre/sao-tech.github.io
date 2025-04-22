@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BAHIA – TECH | Innovación y Automatización</title>
+  <title>BAHIA – TECH | Servicios Profesionales y Productos IoT</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,80 +12,93 @@
     <div class="container header-container">
       <div class="branding">
         <h1>BAHIA – TECH</h1>
-        <p>Innovación y Automatización a tu Alcance</p>
+        <p>Innovación, Automatización y Productos IoT</p>
       </div>
       <div class="contact-info">
-        <p>Contacto: <a href="tel:2920591019">2920-591019</a></p>
+        <p>📞 <a href="tel:2920591019">2920-591019</a> | ✉️ <a href="mailto:alegrematias08@hotmail.com">alegrematias08@hotmail.com</a> | 🔗 <a href="https://www.linkedin.com/in/mat%C3%ADas-">LinkedIn</a></p>
+        <p><a href="assets/cv/alegre-matias.pdf" target="_blank">📥 Descargar CV</a></p>
       </div>
     </div>
   </header>
   
-  <!-- Contenedor principal con scroll snap para una navegación inmediata -->
+  <!-- Contenedor principal con scroll snap -->
   <main class="scroll-container">
-    <!-- Sección: Servicios y Soluciones Tecnológicas -->
+    <!-- Sección: Sobre mí -->
+    <section id="about" class="section reveal">
+      <div class="container">
+        <h2>Sobre Matías Alegre</h2>
+        <p>Estudiante avanzado de Ingeniería Electrónica (5to año - UTN Bahía Blanca). Especializado en sistemas embebidos, IoT y automatización industrial. Desarrollador de firmware y hardware con amplia experiencia en proyectos reales y docencia en tecnologías aplicadas.</p>
+      </div>
+    </section>
+    
+    <!-- Sección: Servicios Profesionales -->
     <section id="services" class="section reveal">
       <div class="container">
-        <h2>Servicios y Soluciones Tecnológicas</h2>
-        <p>Impulsamos la transformación digital en hogares, negocios e industrias mediante soluciones integrales que combinan automatización, diseño electrónico y tecnología IoT de vanguardia.</p>
-        
+        <h2>Servicios Profesionales</h2>
         <div class="service-container">
-          <!-- Soluciones de Automatización y Control -->
           <div class="service-card">
-            <h3>Automatización y Control</h3>
+            <h3>Automatización Industrial & Comercial</h3>
             <ul>
-              <li>Automatización para Entornos Residenciales y Comerciales</li>
-              <li>Sistemas de Riego Inteligente</li>
-              <li>Control de Iluminación Adaptativa y Gestión Energética</li>
-              <li>Sistemas de Seguridad y Control de Acceso</li>
+              <li>Automatización de silos para Bleyssol (módulos I/O Schneider, relés y contactores)</li>
+              <li>Sistemas de riego inteligente (interior y exterior)</li>
+              <li>Control de iluminación adaptativa y secuencias (ESP32, Triacs)</li>
+              <li>Sistemas de ventilación y temporizadores para panaderías</li>
             </ul>
           </div>
-          <!-- Desarrollo y Diseño de Productos Tecnológicos -->
           <div class="service-card">
             <h3>Desarrollo a Medida</h3>
             <ul>
-              <li>Diseño y Fabricación de Placas PCB</li>
-              <li>Desarrollo de Firmware para Microcontroladores</li>
-              <li>Implementación de Protocolos de Comunicación</li>
-              <li>Integración Web y Cloud</li>
+              <li>Diseño y fabricación de placas PCB (KiCad, Altium)</li>
+              <li>Firmware para microcontroladores (ESP32, ESP8266, STM32, Arduino)</li>
+              <li>Implementación de protocolos (MQTT, Modbus, UART, I2C, SPI)</li>
+              <li>Soluciones RFID para seguridad (bicicletero electrónico)</li>
             </ul>
           </div>
-          <!-- Optimización y Mantenimiento -->
           <div class="service-card">
-            <h3>Optimización y Mantenimiento</h3>
+            <h3>Productos IoT Listos para Usar</h3>
             <ul>
-              <li>Servicio Técnico Especializado</li>
-              <li>Consultoría en Proyectos IoT y Automatización</li>
-              <li>Integración de PLCs y Sistemas de Control Industrial</li>
+              <li>Alarma doméstica con ESP8266 y notificaciones en tiempo real</li>
+              <li>Notificador de estado de energía e Internet (ESP8266 + SIM900)</li>
+              <li>Controlador Dimmer IoT con Telegram</li>
+              <li>Monitoreo ambiental con ESP32</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <h3>Consultoría y Mantenimiento</h3>
+            <ul>
+              <li>Servicio técnico especializado y reparación de circuitos</li>
+              <li>Consultoría en proyectos IoT y automatización industrial</li>
+              <li>Integración de PLCs y sistemas de control</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
     
-    <!-- Sección: Portafolio -->
-    <section id="portfolio" class="section reveal">
+    <!-- Sección: Productos Destacados -->
+    <section id="products" class="section reveal">
       <div class="container">
-        <h2>Portafolio</h2>
-        <p>Descubre algunos de nuestros proyectos de vanguardia en automatización y electrónica.</p>
-        
+        <h2>Productos Destacados</h2>
         <div class="portfolio-container">
-          <!-- Proyecto 1 -->
           <div class="portfolio-item">
-            <img src="images/proyecto-riego.jpg" alt="Riego Inteligente">
-            <h3>Riego Inteligente</h3>
-            <p>Sistema automatizado con sensores y electroválvulas para optimizar el uso del agua en cultivos y jardines.</p>
+            <img src="images/proyecto-riego.jpg" alt="Sistema de Riego Inteligente">
+            <h3>Sistema de Riego Inteligente</h3>
+            <p>Control de hasta 8 plantas con sensores de humedad y temperatura.</p>
           </div>
-          <!-- Proyecto 2 -->
           <div class="portfolio-item">
-            <img src="images/monitoreo-ambiental.png" alt="Monitoreo Ambiental">
-            <h3>Monitoreo Ambiental</h3>
-            <p>Dispositivos ESP32 para medición y análisis en tiempo real de temperatura, humedad y calidad del aire.</p>
+            <img src="images/control-iluminacion.webp" alt="Controlador Dimmer IoT">
+            <h3>Controlador Dimmer IoT</h3>
+            <p>ESP32 + Telegram para gestionar iluminación desde tu celular.</p>
           </div>
-          <!-- Proyecto 3 -->
           <div class="portfolio-item">
-            <img src="images/control-iluminacion.webp" alt="Control de Iluminación">
-            <h3>Control de Iluminación y Seguridad</h3>
-            <p>Sistema avanzado que integra iluminación inteligente y soluciones de seguridad para espacios residenciales y comerciales.</p>
+            <img src="images/alarma-casa.jpg" alt="Alarma Doméstica IoT">
+            <h3>Alarma Doméstica IoT</h3>
+            <p>ESP8266 con notificaciones en tiempo real y aplicación móvil.</p>
+          </div>
+          <div class="portfolio-item">
+            <img src="images/notificador-energia.jpg" alt="Notificador de Estado">
+            <h3>Notificador de Energía & Conectividad</h3>
+            <p>Monitoreo remoto con ESP8266 y módulos GSM.</p>
           </div>
         </div>
       </div>
@@ -95,18 +108,14 @@
     <section id="contact" class="section reveal">
       <div class="container">
         <h2>Contacto</h2>
-        <p>¿Interesado en transformar tus espacios con tecnología avanzada? Contáctanos para una consulta gratuita.</p>
-        
+        <p>¿Listo para tu proyecto de automatización o IoT? ¡Hablemos!</p>
         <form id="contact-form">
           <label for="name">Nombre:</label>
           <input type="text" id="name" name="name" required>
-          
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" required>
-          
           <label for="message">Mensaje:</label>
           <textarea id="message" name="message" required></textarea>
-          
           <button type="submit">Enviar Mensaje</button>
         </form>
       </div>
